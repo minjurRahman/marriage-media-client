@@ -1,7 +1,21 @@
-# Getting Started with Create React App
+# Project's Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Project name is **salafiyahNikah**
 
-## Available Scripts
+## Live Website Link
 
-In the project directory, you can run:
+Here You can see the live website [Click here]()
+
+### Project's Description
+
+* Single page application (SPA).
+* Responsive UI.
+
+### Used Technology
+
+* React app
+* React router
+* React Icons
+* Firebase Authentication
+* Tailwind 
+* JavaScript
