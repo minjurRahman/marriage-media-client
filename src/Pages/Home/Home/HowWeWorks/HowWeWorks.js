@@ -12,22 +12,22 @@ const HowWeWorks = () => {
         },
         {
             id: 2,
-            name: 'Cavity Filling',
-            description: "Total Groom's Biodatas",
+            name: 'Search Biodata',
+            description: "You can easily search biodata using many filters including age, upazila, profession, educational qualification.",
             img: 'male',
             view: 704
         },
         {
             id: 3,
-            name: 'Teeth Whitening',
-            description: "Total Bride's Biodatas",
+            name: 'Contact with guardians',
+            description: "If someone likes your biodata or you like someone's biodata you can directly contact their parent.",
             img: 'female',
             view: 496
         },
         {
             id: 3,
-            name: 'Teeth Whitening',
-            description: "Total Successful Marriages",
+            name: 'Get Married',
+            description: "If you like the biodata and conversation, do your own inquiry & get married according to Sunnah.",
             img: 'married',
             view: 53
         },

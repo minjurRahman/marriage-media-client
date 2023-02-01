@@ -11,7 +11,7 @@ const UserStatistic = ({statistic}) => {
             <div className="card-body items-center text-center">
                 {/* <h2 className="card-title">{name}</h2> */}
                 <p>{description}</p>
-                <h3 className='text-5xl'>{view}</h3>
+                <h3 className='text-4xl font-bold'>{view}</h3>
             </div>
         </div>
     );
