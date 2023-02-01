@@ -1,5 +1,9 @@
 import React from 'react';
 import HowWeWork from './HowWeWork';
+import createbio from '../../../../assets/aboutWorks/hiw-create-biodata.svg';
+import search from '../../../../assets/aboutWorks/hiw-search.svg';
+import contact from '../../../../assets/aboutWorks/hiw-contact.svg';
+import married from '../../../../assets/aboutWorks/hiw-success.svg';
 
 const HowWeWorks = () => {
     const worksData = [
@@ -7,28 +11,28 @@ const HowWeWorks = () => {
             id: 1,
             name: 'Create Biodata',
             description: "You can easily create a biodata on Salafiyah Nikah completely free of cost within some steps.",
-            img: 'couple',
+            img: createbio,
             view: 1200
         },
         {
             id: 2,
             name: 'Search Biodata',
             description: "You can easily search biodata using many filters including age, upazila, profession, educational qualification.",
-            img: 'male',
+            img: search,
             view: 704
         },
         {
             id: 3,
             name: 'Contact with guardians',
             description: "If someone likes your biodata or you like someone's biodata you can directly contact their parent.",
-            img: 'female',
+            img: contact,
             view: 496
         },
         {
             id: 3,
             name: 'Get Married',
             description: "If you like the biodata and conversation, do your own inquiry & get married according to Sunnah.",
-            img: 'married',
+            img: married,
             view: 53
         },
     ]
