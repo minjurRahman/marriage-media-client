@@ -10,24 +10,28 @@ const Footer = () => {
                     <p className='t'>Bangladeshi<br />Number one marriage media</p>
                 </div>
                 <div>
-                    <span className="footer-title">Services</span>
+                    <span className="text-xl font-bold">Services</span>
                     <a href='/' className="link link-hover">Branding</a>
                     <a href='/' className="link link-hover">Design</a>
                     <a href='/' className="link link-hover">Advertisement</a>
                 </div>
                 <div>
-                    <span className="footer-title">Company</span>
-                    <a href='/' className="link link-hover">About us</a>
-                    <a href='/' className="link link-hover">Contact</a>
-                    <a href='/' className="link link-hover">Jobs</a>
+                    <span className="text-xl font-bold">Quick Links</span>
+                    <Link to='/'>Home</Link>
+                    <Link to='/about-us'>About Us</Link>
+                    <Link to='/faq'>FAQ</Link>
+                    <Link to='/contact-us'>Contact Us</Link>
                 </div>
                 <div>
-                    <span className="footer-title">Legal</span>
-                    <a href='/' className="link link-hover">Terms of use</a>
-                    <a href='/' className="link link-hover">Privacy policy</a>
-                    <a href='/' className="link link-hover">Cookie policy</a>
+                    <span className="text-xl font-bold">Legal</span>
+                    <Link to='/terms-and-conditions'>Terms of use</Link>
+                    <Link to='/privacy-policy'>Privacy policy</Link>
+                    <Link to='/refund-policy'>Refund Policy</Link>
                 </div>
             </footer>
+            <div className=' p-4 bg-pink-600 text-base-content text-center rounded-sm'>
+                <p className='text-white'>Copyright © 2023 - All right reserved by salafiyahnikah.com</p>
+            </div>
         </section>
     );
 };

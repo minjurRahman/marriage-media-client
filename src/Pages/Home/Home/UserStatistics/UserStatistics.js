@@ -9,37 +9,37 @@ const UserStatistics = () => {
     const servicesData = [
         {
             id: 1,
-            name: 'Fluoride Treatment',
+            name: 'All Grooms and Brides',
             description: "Total Groom and Bride's Biodatas",
             img: couple,
-            view: 1200
+            view: '1200'
         },
         {
             id: 2,
-            name: 'Cavity Filling',
+            name: 'All Grooms',
             description: "Total Groom's Biodatas",
             img: male,
-            view: 704
+            view: '704'
         },
         {
             id: 3,
-            name: 'Teeth Whitening',
+            name: 'All Brides',
             description: "Total Bride's Biodatas",
             img: female,
-            view: 496
+            view: '496'
         },
         {
             id: 3,
-            name: 'Teeth Whitening',
+            name: 'All Marriages',
             description: "Total Successful Marriages",
             img: married,
-            view: 53
+            view: '62+'
         },
     ]
 
     return (
         <div>
-            <div className='mt-16 mb-6'>
+            <div className='mt-36 mb-10'>
                 <div className='text-center mb-12'>
                     <h1 className='text-5xl font-bold text-primary uppercase'>Salafiyah Nikah User Statistics</h1>
                 </div>

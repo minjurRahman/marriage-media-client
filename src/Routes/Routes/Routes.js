@@ -4,6 +4,9 @@ import ContactUs from "../../Pages/ContactUs/ContactUs";
 import FAQ from "../../Pages/FAQ/FAQ";
 import About from "../../Pages/Home/About/About";
 import Home from "../../Pages/Home/Home/Home";
+import PrivacyPolicy from "../../Pages/PrivacyPolicy/PrivacyPolicy";
+import RefundPolicy from "../../Pages/RefundPolicy/RefundPolicy";
+import TermsAndConditions from "../../Pages/TermsAndConditions/TermsAndConditions";
 
 export const router = createBrowserRouter([
     {
@@ -25,6 +28,18 @@ export const router = createBrowserRouter([
             {
                 path: '/contact-us',
                 element: <ContactUs></ContactUs>
+            },
+            {
+                path: '/privacy-policy',
+                element: <PrivacyPolicy></PrivacyPolicy>
+            },
+            {
+                path: '/terms-and-conditions',
+                element: <TermsAndConditions></TermsAndConditions>
+            },
+            {
+                path: '/refund-policy',
+                element: <RefundPolicy></RefundPolicy>
             },
         ]
     }

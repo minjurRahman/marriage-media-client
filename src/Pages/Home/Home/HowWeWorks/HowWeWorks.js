@@ -38,7 +38,7 @@ const HowWeWorks = () => {
     ]
     return (
         <div>
-            <div className='mt-16 mb-6'>
+            <div className='mt-36 mb-6'>
                 <div className='text-center mb-12'>
                     <h1 className='text-5xl font-bold text-primary uppercase'> How Salafiyah Nikah Works</h1>
                 </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import PrimaryBtn from '../../../components/PromaryBtn/PrimaryBtn';
 import useTitle from '../../../Hooks/TitleNavigate';
 import Banner from './Banner';
 import CreateBio from './CreateBio';
