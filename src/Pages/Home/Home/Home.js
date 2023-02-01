@@ -3,6 +3,7 @@ import PrimaryBtn from '../../../components/PromaryBtn/PrimaryBtn';
 import useTitle from '../../../Hooks/TitleNavigate';
 import Banner from './Banner';
 import CreateBio from './CreateBio';
+import HowWeWorks from './HowWeWorks/HowWeWorks';
 import UserStatistics from './UserStatistics/UserStatistics';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <CreateBio></CreateBio>
             <UserStatistics></UserStatistics>
+            <HowWeWorks></HowWeWorks>
         </section>
     );
 };

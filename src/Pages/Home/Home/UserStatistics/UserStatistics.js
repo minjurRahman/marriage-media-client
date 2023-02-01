@@ -40,7 +40,7 @@ const UserStatistics = () => {
     return (
         <div>
             <div className='mt-16 mb-6'>
-                <div className='text-center mb-3'>
+                <div className='text-center mb-12'>
                     <h1 className='text-5xl font-bold text-primary uppercase'>Salafiyah Nikah User Statistics</h1>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
