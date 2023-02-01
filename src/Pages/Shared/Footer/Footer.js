@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <span className="text-xl font-bold">Legal</span>
-                    <Link to='/terms-and-conditions'>Terms of use</Link>
+                    <Link to='/terms-and-conditions'>Terms & Conditions</Link>
                     <Link to='/privacy-policy'>Privacy policy</Link>
                     <Link to='/refund-policy'>Refund Policy</Link>
                 </div>
