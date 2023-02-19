@@ -8,6 +8,7 @@ const NavBar = () => {
         <li><Link className='text-lg font-semibold rounded-lg' to='/about-us'>About Us</Link></li>
         <li><Link className='text-lg font-semibold rounded-lg' to='/faq'>FAQ</Link></li>
         <li><Link className='text-lg font-semibold rounded-lg' to='/contact-us'>Contact Us</Link></li>
+        <li><Link className='text-lg font-semibold rounded-lg' to='/dashboard'>Dashboard</Link></li>
 
         {/* {user?.uid ?
             <>

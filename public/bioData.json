@@ -1,0 +1,31 @@
+[
+    {
+      "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+      "category": "Men's Sneaker",
+      "name": "Afzal Hossain",
+      "seller": "Addidas",
+      "price": 420,
+      "details": "The seated dip machine allows you to enjoy all the benefits of normal bench dips but using a machine.",
+      "time": 5,
+      "ratings": 4,
+      "ratingsCount": 3725,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-CKVrzpGoLb4PYAvM89bVeZrhvXDUGxXOtQ&usqp=CAU",
+      "shipping": 1,
+      "quantity": 0
+    },
+    {
+      "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
+      "category": "Men's Sneaker",
+      "name": "Maruf",
+      "seller": "Addidas",
+      "price": 196,
+      "details": "Before you start swinging, make sure you anchor the rope around a heavy kettlebell.",
+      "time": 6,
+      "ratings": 5,
+      "ratingsCount": 4355,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6LmodWvV1UKEkyhjfgT_4yg-sxEM9oH31Bw&usqp=CAU",
+      "shipping": 14,
+      "quantity": 0
+    }
+    
+  ]
