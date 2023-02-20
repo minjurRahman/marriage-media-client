@@ -79,12 +79,12 @@ const Login = () => {
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                     </div>
                     <input
-                        className='btn btn-outline btn-secondary my-4 w-full max-w-xs' value='Login' type="submit" />
+                        className='btn btn-secondary my-4 w-full max-w-xs' value='Login' type="submit" />
                     {loginError && <p className='text-red-600'>{loginError}</p>}
                 </form>
                 <p className='mt-3'>New to SalafiyahNikah? <Link className='text-accent' to='/signup'>Create new account</Link> </p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignIn} className='btn btn-outline btn-secondary w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-secondary w-full'>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );
