@@ -13,8 +13,10 @@ import SupportReport from "../../Pages/Dashboard/SupportReport";
 import FAQ from "../../Pages/FAQ/FAQ";
 import About from "../../Pages/Home/About/About";
 import Home from "../../Pages/Home/Home/Home";
+import Login from "../../Pages/Login/Login";
 import PrivacyPolicy from "../../Pages/PrivacyPolicy/PrivacyPolicy";
 import RefundPolicy from "../../Pages/RefundPolicy/RefundPolicy";
+import SignUp from "../../Pages/SignUp/SignUp";
 import TermsAndConditions from "../../Pages/TermsAndConditions/TermsAndConditions";
 
 export const router = createBrowserRouter([
@@ -37,6 +39,14 @@ export const router = createBrowserRouter([
             {
                 path: '/contact-us',
                 element: <ContactUs></ContactUs>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <SignUp></SignUp>
             },
             {
                 path: '/privacy-policy',

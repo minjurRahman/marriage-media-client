@@ -1,28 +1,40 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { toast } from 'react-hot-toast';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider';
 
 const NavBar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                toast.success('Log out successful')
+                navigate('/')
+            })
+            .catch(error => console.error(error));
+    }
 
     const menuItems = <>
         <li><Link className='text-lg font-semibold rounded-lg' to='/'>Home</Link></li>
         <li><Link className='text-lg font-semibold rounded-lg' to='/about-us'>About Us</Link></li>
         <li><Link className='text-lg font-semibold rounded-lg' to='/faq'>FAQ</Link></li>
         <li><Link className='text-lg font-semibold rounded-lg' to='/contact-us'>Contact Us</Link></li>
-        <li><Link className='text-lg font-semibold rounded-lg' to='/dashboard'>Dashboard</Link></li>
 
-        {/* {user?.uid ?
+        {user?.uid ?
             <>
                 <li><Link className='text-lg font-semibold rounded-lg' to='/dashboard'>Dashboard</Link></li>
-                <li><button onClick={handleLogOut} className='text-lg font-semibold rounded-lg text-accent'>Sign Out</button></li>
+                <li><button onClick={handleLogOut} className='rounded-lg btn-outline btn btn-primary'>Sign Out</button></li>
             </>
             :
-            <li><Link className='text-lg font-semibold rounded-lg text-accent' to='/login'>Login</Link></li>
-        } */}
+            <li><Link className='rounded-lg btn btn-outline btn-primary' to='/login'>Login</Link></li>
+        }
 
     </>
 
     return (
-        <div className="navbar bg-pink-100 p-6 rounded-md">
+        <div className="navbar bg-pink-200 p-6 rounded-md">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,7 +52,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='/' className="btn btn-primary">Login</a>
+                {/* <a href='/' className="btn btn-primary">Login</a> */}
             </div>
         </div>
     );
