@@ -1,11 +1,11 @@
 import React from 'react';
 
-const EditBiodata = () => {
+const Commitment = () => {
     return (
         <div>
-            Edit Biodata
+            Commitment
         </div>
     );
 };
 
-export default EditBiodata;
+export default Commitment;

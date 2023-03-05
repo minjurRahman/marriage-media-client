@@ -3,7 +3,7 @@ import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main";
 import ContactUs from "../../Pages/ContactUs/ContactUs";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
-import EditBiodata from "../../Pages/Dashboard/EditBiodata";
+import EditBioDataInfo from "../../Pages/Dashboard/EditBioData/EditBioSection/EditBioDataInfo";
 import IgnoreList from "../../Pages/Dashboard/IgnoreList";
 import LogOut from "../../Pages/Dashboard/LogOut";
 import MyPurchased from "../../Pages/Dashboard/MyPurchased";
@@ -72,7 +72,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/editbiodata',
-                element: <EditBiodata></EditBiodata>
+                element: <EditBioDataInfo></EditBioDataInfo>
             },
             {
                 path: '/dashboard/shortlist',
