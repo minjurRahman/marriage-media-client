@@ -7,38 +7,62 @@ const FamilyInfo = () => {
             <hr />
             <form className='flex justify-center items-center'>
                 <div>
-                    <label className="label"> <span className="label-text">Your Education Method</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="">General</option>
-                            <option value="">Qawmi</option>
-                            <option value="">Alia</option>
-                        </optgroup>
-                    </select>
-
-                    <label className="label"> <span className="label-text">Marital Status</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="">Never Married</option>
-                            <option value="">Married</option>
-                            <option value="">Divorced</option>
-                            <option value="">Widow</option>
-                            <option value="">Widower</option>
-                        </optgroup>
-                    </select>
-
-                    <label className="label"> <span className="label-text">Birthday</span> </label>
-                    <input type='date'
+                    <label className="label"> <span className="label-text">Father's Name</span> </label>
+                    <input type='text'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         // {...register("name", {
                         //     required: 'Name is required'
                         // })}
-                        placeholder='Please enter your area name'
+                        placeholder='Name'
                     />
-                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Please provide your real birth date. If there is a fabricated birth date in NID or birth registration, do not provide it.</span></label>
+                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Only for authority.</span></label>
 
+                    <label className="label"> <span className="label-text">Is your father alive? </span> </label>
+                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
+                        <optgroup label="Please choose an option">
+                            <option selected disabled value="">Select</option>
+                            <option value="">Yes, alive</option>
+                            <option value="">Not alive</option>
+                        </optgroup>
+                    </select>
+
+                    <label className="label"> <span className="label-text">Description of father's profession</span> </label>
+                    <input type='text'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        // {...register("name", {
+                        //     required: 'Name is required'
+                        // })}
+                        placeholder='Profession'
+                    />
+                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> If he is an employee, write the type of organization and title, and if he is a businessman, what kind of business he does etc.</span></label>
+
+                    <label className="label"> <span className="label-text">Mother's Name</span> </label>
+                    <input type='text'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        // {...register("name", {
+                        //     required: 'Name is required'
+                        // })}
+                        placeholder='Name'
+                    />
+                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Only for authority.</span></label>
+
+                    <label className="label"> <span className="label-text">Is your mother alive? </span> </label>
+                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
+                        <optgroup label="Please choose an option">
+                            <option selected disabled value="">Select</option>
+                            <option value="">Yes, alive</option>
+                            <option value="">Not alive</option>
+                        </optgroup>
+                    </select>
+
+                    <label className="label"> <span className="label-text">Description of mother's profession</span> </label>
+                    <input type='text'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        // {...register("name", {
+                        //     required: 'Name is required'
+                        // })}
+                        placeholder='Profession'
+                    />
 
                     <label className="label"> <span className="label-text">Height</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
