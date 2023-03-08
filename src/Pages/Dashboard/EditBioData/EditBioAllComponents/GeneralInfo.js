@@ -52,7 +52,7 @@ const GeneralInfo = () => {
                     <label className="label"> <span className="label-text">Complexion</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
+                            <option selected disabled value="">Select</option>
                             <option value="">Black</option>
                             <option value="">Brown</option>
                             <option value="">Light Brown</option>
@@ -73,7 +73,7 @@ const GeneralInfo = () => {
                     <label className="label"> <span className="label-text">Blood Group</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
+                            <option selected disabled value="">Select</option>
                             <option value="">A+</option>
                             <option value="">A-</option>
                             <option value="">B+</option>
@@ -89,8 +89,8 @@ const GeneralInfo = () => {
                     <label className="label"> <span className="label-text">Nationality</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">Bangladeshi</option>   
+                            <option selected disabled value="">Select</option>
+                            <option value="">Bangladeshi</option>
                         </optgroup>
                     </select>
                 </div>
