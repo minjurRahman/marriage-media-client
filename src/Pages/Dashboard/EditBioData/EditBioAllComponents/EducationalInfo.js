@@ -17,83 +17,131 @@ const EducationalInfo = () => {
                         </optgroup>
                     </select>
 
-                    <label className="label"> <span className="label-text">Marital Status</span> </label>
+                    <label className="label"> <span className="label-text">Highest educational qualification</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
                             <option selected disabled value="">Select</option>
-                            <option value="">Never Married</option>
-                            <option value="">Married</option>
-                            <option value="">Divorced</option>
-                            <option value="">Widow</option>
-                            <option value="">Widower</option>
+                            <option value="">Below SSC</option>
+                            <option value="">SSC</option>
+                            <option value="">HSC</option>
+                            <option value="">Diploma Running</option>
+                            <option value="">Diploma</option>
+                            <option value="">Undergraduate</option>
+                            <option value="">Graduate</option>
+                            <option value="">Post Graduate</option>
+                            <option value="">Doctorate</option>
                         </optgroup>
                     </select>
 
-                    <label className="label"> <span className="label-text">Birthday</span> </label>
-                    <input type='date'
-                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
-                        // {...register("name", {
-                        //     required: 'Name is required'
-                        // })}
-                        placeholder='Please enter your area name'
-                    />
-                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Please provide your real birth date. If there is a fabricated birth date in NID or birth registration, do not provide it.</span></label>
-
-
-                    <label className="label"> <span className="label-text">Height</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="">Less than 4'5'</option>
-                            <option value="">5'</option>
-                            <option value="">6'</option>
-                        </optgroup>
-                    </select>
-
-                    <label className="label"> <span className="label-text">Complexion</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">Black</option>
-                            <option value="">Brown</option>
-                            <option value="">Light Brown</option>
-                            <option value="">Fair</option>
-                            <option value="">Very Fair</option>
-                        </optgroup>
-                    </select>
-
-                    <label className="label"> <span className="label-text">Weight</span> </label>
+                    <label className="label"> <span className="label-text">SSC / Dakhil / Equivalent Passing year </span> </label>
                     <input type='number'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         // {...register("name", {
                         //     required: 'Name is required'
                         // })}
-                        placeholder='Your Weight'
+                        placeholder='2011'
                     />
 
-                    <label className="label"> <span className="label-text">Blood Group</span> </label>
+                    <label className="label"> <span className="label-text">Group</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">A+</option>
-                            <option value="">A-</option>
-                            <option value="">B+</option>
-                            <option value="">B-</option>
-                            <option value="">AB+</option>
-                            <option value="">AB-</option>
-                            <option value="">O+</option>
-                            <option value="">O-</option>
-                            <option value="">Don't know</option>
+                            <option selected disabled value="">Select</option>
+                            <option value="">Science</option>
+                            <option value="">Commerce</option>
+                            <option value="">Arts</option>
+                            <option value="">Vocational</option>
                         </optgroup>
                     </select>
 
-                    <label className="label"> <span className="label-text">Nationality</span> </label>
+                    <label className="label"> <span className="label-text">Result</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">Bangladeshi</option>   
+                            <option selected disabled value="">Select</option>
+                            <option value="">A+ (All Subjects)</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">A-</option>
+                            <option value="">B</option>
+                            <option value="">C</option>
+                            <option value="">D</option>
                         </optgroup>
                     </select>
+
+                    <label className="label"> <span className="label-text">What medium did you study after SSC?</span> </label>
+                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
+                        <optgroup label="Please choose an option">
+                            <option selected disabled value="">Select</option>
+                            <option value="">HSC</option>
+                            <option value="">Diploma</option>
+                        </optgroup>
+                    </select>
+
+                    <label className="label"> <span className="label-text">HSC / Alim / Equivalent passing year </span> </label>
+                    <input type='number'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        // {...register("name", {
+                        //     required: 'Name is required'
+                        // })}
+                        placeholder='2013'
+                    />
+
+                    <label className="label"> <span className="label-text">Group </span> </label>
+                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
+                        <optgroup label="Please choose an option">
+                            <option selected disabled value="">Select</option>
+                            <option value="">Science</option>
+                            <option value="">Commerce</option>
+                            <option value="">Arts</option>
+                            <option value="">Vocational</option>
+                        </optgroup>
+                    </select>
+
+                    <label className="label"> <span className="label-text">Result</span> </label>
+                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
+                        <optgroup label="Please choose an option">
+                            <option selected disabled value="">Select</option>
+                            <option value="">A+ (All Subjects)</option>
+                            <option value="">A+</option>
+                            <option value="">A</option>
+                            <option value="">A-</option>
+                            <option value="">B</option>
+                            <option value="">C</option>
+                            <option value="">D</option>
+                        </optgroup>
+                    </select>
+
+                    <label className="label"> <span className="label-text">Graduation study subject</span> </label>
+                    <input type='number'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        // {...register("name", {
+                        //     required: 'Name is required'
+                        // })}
+                        placeholder='Name of subject'
+                    />
+
+                    <label className="label"> <span className="label-text">Name of educational institution</span> </label>
+                    <input type='number'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        // {...register("name", {
+                        //     required: 'Name is required'
+                        // })}
+                        placeholder='Institution/ University'
+                    />
+
+                    <label className="label"> <span className="label-text">Passing year</span> </label>
+                    <input type='number'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        // {...register("name", {
+                        //     required: 'Name is required'
+                        // })}
+                        placeholder='2018'
+                    />
+
+                    <label className="label"> <span className="label-text">Other educational qualifications</span> </label>
+                    <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" ></textarea>
+                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Write the details including the name of the educational institution, subject, passing year. If there is nothing, leave it empty.</span></label>
+
+                    
                 </div>
             </form>
 
