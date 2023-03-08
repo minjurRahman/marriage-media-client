@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Address = () => {
     return (
-        <div className='h-[600px] flex justify-center items-center'>
+        <div className='h-[600px] mb-6 flex justify-center items-center'>
             <div className='p-8 card w-96 border shadow-xl'>
                 <h2 className='text-3xl font-semibold text-center mb-4'>Address</h2>
                 <hr />
