@@ -3,7 +3,7 @@ import React from 'react';
 const ExpectedLifePartnerInfo = () => {
     return (
         <div className='mb-6 '>
-            <h2 className='text-3xl font-semibold text-center mb-4'>Educational Qualifications</h2>
+            <h2 className='text-3xl font-semibold text-center mb-4'>Expected Life Partner</h2>
             <hr />
             <form className='flex justify-center items-center'>
                 <div>
