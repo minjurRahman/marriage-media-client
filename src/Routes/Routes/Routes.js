@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main";
-import ContactUs from "../../Pages/ContactUs/ContactUs";
+import Contact from "../../Pages/ContactUs/Contact";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
 import EditBioDataInfo from "../../Pages/Dashboard/EditBioData/EditBioSection/EditBioDataInfo";
 import IgnoreList from "../../Pages/Dashboard/IgnoreList";
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/contact-us',
-                element: <ContactUs></ContactUs>
+                element: <Contact></Contact>
             },
             {
                 path: '/login',

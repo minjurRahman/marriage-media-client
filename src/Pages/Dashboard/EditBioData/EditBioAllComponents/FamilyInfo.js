@@ -64,60 +64,59 @@ const FamilyInfo = () => {
                         placeholder='Profession'
                     />
 
-                    <label className="label"> <span className="label-text">Height</span> </label>
+                    <label className="label"> <span className="label-text">How many brothers do you have?</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
                             <option selected disabled value="">Select</option>
-                            <option value="">Less than 4'5'</option>
-                            <option value="">5'</option>
-                            <option value="">6'</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
                         </optgroup>
                     </select>
 
-                    <label className="label"> <span className="label-text">Complexion</span> </label>
+                    <label className="label"> <span className="label-text">Brothers information</span> </label>
+                    <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" ></textarea>
+                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Write down educational qualifications, marital status, and occupation. If you have more than one brother, write in a separate line with a comma.</span></label>
+
+                    <label className="label"> <span className="label-text">How many sisters do you have?</span> </label>
+                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
+                        <optgroup label="Please choose an option">
+                            <option selected disabled value="">Select</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                        </optgroup>
+                    </select>
+
+                    <label className="label"> <span className="label-text">Sisters information</span> </label>
+                    <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" ></textarea>
+                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Write down educational qualifications, marital status, and occupation. If you have more than one sister, write in a separate line with a comma.</span></label>
+
+                    <label className="label"> <span className="label-text">Family financial status</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
                         <optgroup label="Please choose an option">
                         <option selected disabled value="">Select</option>
-                            <option value="">Black</option>
-                            <option value="">Brown</option>
-                            <option value="">Light Brown</option>
-                            <option value="">Fair</option>
-                            <option value="">Very Fair</option>
+                            <option value="">Upper class</option>
+                            <option value="">Upper middle class</option>
+                            <option value="">Middle class</option>
+                            <option value="">Lower middle class</option>
+                            <option value="">Lower class</option>
                         </optgroup>
                     </select>
 
-                    <label className="label"> <span className="label-text">Weight</span> </label>
-                    <input type='number'
-                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
-                        // {...register("name", {
-                        //     required: 'Name is required'
-                        // })}
-                        placeholder='Your Weight'
-                    />
+                    <label className="label"> <span className="label-text">How is your family's religious condition?</span> </label>
+                    <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" ></textarea>
 
-                    <label className="label"> <span className="label-text">Blood Group</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">A+</option>
-                            <option value="">A-</option>
-                            <option value="">B+</option>
-                            <option value="">B-</option>
-                            <option value="">AB+</option>
-                            <option value="">AB-</option>
-                            <option value="">O+</option>
-                            <option value="">O-</option>
-                            <option value="">Don't know</option>
-                        </optgroup>
-                    </select>
-
-                    <label className="label"> <span className="label-text">Nationality</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">Bangladeshi</option>   
-                        </optgroup>
-                    </select>
                 </div>
             </form>
 
