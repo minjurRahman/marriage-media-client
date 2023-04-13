@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { DrawerContext } from '../../../App';
 import { AuthContext } from '../../../contexts/AuthProvider';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext)
     const navigate = useNavigate()
+    const [isOpen, setIsOpen] = useContext(DrawerContext);
+
+    const { pathname } = useLocation()
 
     const handleLogOut = () => {
         logOut()
@@ -54,9 +58,13 @@ const NavBar = () => {
             <div className="navbar-end">
                 {/* <a href='/' className="btn btn-primary">Login</a> */}
             </div>
-            <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden">
-                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-             </label>
+
+            {
+                pathname.includes('dashboard') &&
+                <label onClick={() => setIsOpen(!isOpen)} htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+            }
         </div>
     );
 };

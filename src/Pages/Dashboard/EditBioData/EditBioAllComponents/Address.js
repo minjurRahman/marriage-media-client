@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Address = () => {
+const Address = ({register, errors, setGender}) => {
     return (
         <div className='h-[600px] mb-6 flex justify-center items-center'>
             <div className='p-8 card w-96 border shadow-xl'>
@@ -10,36 +10,40 @@ const Address = () => {
                 <form onSubmit=''>
                     <div className="form-control w-full max-w-xs">
                     <label for="cars">Permanent Address</label>
-                        {/*  */}
+    
                         <label className="label"> <span className="label-text">Select Your District</span> </label>
-                        <select name="district" className='input input-bordered w-full mt-1 max-w-xs'>
+                        <select name="district" className='input input-bordered w-full mt-1 max-w-xs'
+                        {...register("PermanentAddress", {
+                            required: 'Permanent Address is required'
+                        })}
+                        >
                             <optgroup label="Dhaka">
-                                <option value="">Dhaka</option>
-                                <option value="">Faridpur</option>
-                                <option value="">Gazipur</option>
-                                <option value="">Gopalganj</option>
-                                <option value="">Kishoreganj</option>
-                                <option value="">Madaripur</option>
-                                <option value="">Manikganj</option>
-                                <option value="">Munshiganj</option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Faridpur">Faridpur</option>
+                                <option value="Gazipur">Gazipur</option>
+                                <option value="Gopalganj">Gopalganj</option>
+                                <option value="Kishoreganj">Kishoreganj</option>
+                                <option value="Madaripur">Madaripur</option>
+                                <option value="Manikganj">Manikganj</option>
+                                <option value="Munshiganj">Munshiganj</option>
                             </optgroup>
                             <optgroup label="Barishal">
-                                <option value="">Barishal</option>
-                                <option value="">Barguna</option>
-                                <option value="">Bhola</option>
-                                <option value="">Jhalakathi</option>
-                                <option value="">Patuakhali</option>
-                                <option value="">Pirojpur</option>
+                                <option value="Barishal">Barishal</option>
+                                <option value="Barguna">Barguna</option>
+                                <option value="Bhola">Bhola</option>
+                                <option value="Jhalakathi">Jhalakathi</option>
+                                <option value="Patuakhali">Patuakhali</option>
+                                <option value="Pirojpur">Pirojpur</option>
                             </optgroup>
                             <optgroup label="Rajshahi">
-                                <option value="">Bogura</option>
-                                <option value="">Chapainawabganj</option>
-                                <option value="">Joypurhat</option>
-                                <option value="">Naogaon</option>
-                                <option value="">Natore</option>
-                                <option value="">Pabna</option>
-                                <option value="">Rajshahi</option>
-                                <option value="">Sirajganj</option>
+                                <option value="Bogura">Bogura</option>
+                                <option value="Chapainawabganj">Chapainawabganj</option>
+                                <option value="Joypurhat">Joypurhat</option>
+                                <option value="Naogaon">Naogaon</option>
+                                <option value="Natore">Natore</option>
+                                <option value="Pabna">Pabna</option>
+                                <option value="Rajshahi">Rajshahi</option>
+                                <option value="Sirajganj">Sirajganj</option>
                             </optgroup>
                         </select>
 
@@ -48,15 +52,14 @@ const Address = () => {
 
                         <input type='text'
                             className='input input-bordered mt-3 w-full max-w-xs'
-                            // {...register("name", {
-                            //     required: 'Name is required'
-                            // })}
-                            placeholder='Please enter your area name'
+                            {...register("DetailsAddress", {
+                                required: 'Address Details is required'
+                            })}
+                            placeholder='Please write your details Address'
                         />
+                        {/* {errors.Details-Address && <p className='text-red-600'>{errors.Details-Address.message}</p>} */}
 
-                        {/* {errors.name && <p className='text-red-600'>{errors.name.message}</p>} */}
                         <label for="cars">Present Address</label>
-
                         <div className="form-control">
                             <label className="cursor-pointer label">
                                 <input type="checkbox" checked className="checkbox checkbox-secondary" />
@@ -64,43 +67,39 @@ const Address = () => {
                             </label>
                         </div>
 
-                        {/* <input type='email'
-                            className='input input-bordered w-full max-w-xs'
-                            // {...register("email", {
-                            //     required: 'Email is required'
-                            // })}
-                            placeholder='Enter your email address'
-                        /> */}
-                        {/* {errors.email && <p className='text-red-600'>{errors.email.message}</p>} */}
                         <label className="label"> <span className="label-text">Select Your District</span> </label>
-                        <select name="district" className='input input-bordered w-full mt-1 max-w-xs'>
+                        <select name="district" className='input input-bordered w-full mt-1 max-w-xs'
+                        {...register("PresentAddress", {
+                            required: 'Present Address is required'
+                        })}
+                        >
                             <optgroup label="Dhaka">
-                                <option value="">Dhaka</option>
-                                <option value="">Faridpur</option>
-                                <option value="">Gazipur</option>
-                                <option value="">Gopalganj</option>
-                                <option value="">Kishoreganj</option>
-                                <option value="">Madaripur</option>
-                                <option value="">Manikganj</option>
-                                <option value="">Munshiganj</option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Faridpur">Faridpur</option>
+                                <option value="Gazipur">Gazipur</option>
+                                <option value="Gopalganj">Gopalganj</option>
+                                <option value="Kishoreganj">Kishoreganj</option>
+                                <option value="Madaripur">Madaripur</option>
+                                <option value="Manikganj">Manikganj</option>
+                                <option value="Munshiganj">Munshiganj</option>
                             </optgroup>
                             <optgroup label="Barishal">
-                                <option value="">Barishal</option>
-                                <option value="">Barguna</option>
-                                <option value="">Bhola</option>
-                                <option value="">Jhalakathi</option>
-                                <option value="">Patuakhali</option>
-                                <option value="">Pirojpur</option>
+                                <option value="Barishal">Barishal</option>
+                                <option value="Barguna">Barguna</option>
+                                <option value="Bhola">Bhola</option>
+                                <option value="Jhalakathi">Jhalakathi</option>
+                                <option value="Patuakhali">Patuakhali</option>
+                                <option value="Pirojpur">Pirojpur</option>
                             </optgroup>
                             <optgroup label="Rajshahi">
-                                <option value="">Bogura</option>
-                                <option value="">Chapainawabganj</option>
-                                <option value="">Joypurhat</option>
-                                <option value="">Naogaon</option>
-                                <option value="">Natore</option>
-                                <option value="">Pabna</option>
-                                <option value="">Rajshahi</option>
-                                <option value="">Sirajganj</option>
+                                <option value="Bogura">Bogura</option>
+                                <option value="Chapainawabganj">Chapainawabganj</option>
+                                <option value="Joypurhat">Joypurhat</option>
+                                <option value="Naogaon">Naogaon</option>
+                                <option value="Natore">Natore</option>
+                                <option value="Pabna">Pabna</option>
+                                <option value="Rajshahi">Rajshahi</option>
+                                <option value="Sirajganj">Sirajganj</option>
                             </optgroup>
                         </select>
 
@@ -110,9 +109,9 @@ const Address = () => {
                     <label className="label"> <span className="label-text">Where did you grow up?</span> </label>
                         <input type='text'
                             className='input input-bordered w-full max-w-xs'
-                            // {...register("email", {
-                            //     required: 'Email is required'
-                            // })}
+                            {...register("GrowUp", {
+                                required: 'Grow Up is required'
+                            })}
                             placeholder='District'
                         />
                     </div>

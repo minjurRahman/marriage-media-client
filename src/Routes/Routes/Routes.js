@@ -6,6 +6,7 @@ import Dashboard from "../../Pages/Dashboard/Dashboard";
 import EditBioDataInfo from "../../Pages/Dashboard/EditBioData/EditBioSection/EditBioDataInfo";
 import IgnoreList from "../../Pages/Dashboard/IgnoreList";
 import LogOut from "../../Pages/Dashboard/LogOut";
+import MyBioData from "../../Pages/Dashboard/MyBioData/MyBioData";
 import MyPurchased from "../../Pages/Dashboard/MyPurchased";
 import Settings from "../../Pages/Dashboard/Settings";
 import ShortList from "../../Pages/Dashboard/ShortList";
@@ -68,7 +69,13 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard',
-                element: <Dashboard></Dashboard>
+                element: <Dashboard></Dashboard>,    
+                loader: ({params}) => fetch(`http://localhost:5000/user/${params.email}`)          
+            },
+            {
+                path: '/dashboard/mybiodata/:email',
+                element: <MyBioData></MyBioData>,
+                loader: ({params}) => fetch(`http://localhost:5000/user/${params.email}`)
             },
             {
                 path: '/dashboard/editbiodata',

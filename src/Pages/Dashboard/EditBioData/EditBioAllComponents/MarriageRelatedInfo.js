@@ -1,99 +1,72 @@
 import React from 'react';
 
-const MarriageRelatedInfo = () => {
+const MarriageRelatedInfo = ({ register, errors }) => {
     return (
         <div className='mb-6 '>
             <h2 className='text-3xl font-semibold text-center mb-4'>Marriage Related Information</h2>
             <hr />
             <form className='flex justify-center items-center'>
                 <div>
-                    <label className="label"> <span className="label-text">Your Education Method</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="">General</option>
-                            <option value="">Qawmi</option>
-                            <option value="">Alia</option>
-                        </optgroup>
-                    </select>
+                    <label className="label"> <span className="label-text">Why do you want to get married again when you are married?</span> </label>
+                    <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" 
+                    {...register("WhySecondMarried", {
+                        required: 'This field is required'
+                    })}
+                    ></textarea>
+                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Write details whether the present wife has consent to your new marriage and other matters.</span></label>  
 
-                    <label className="label"> <span className="label-text">Marital Status</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="">Never Married</option>
-                            <option value="">Married</option>
-                            <option value="">Divorced</option>
-                            <option value="">Widow</option>
-                            <option value="">Widower</option>
-                        </optgroup>
-                    </select>
+                    <label className="label"> <span className="label-text">How many wives and children do you have at present?</span> </label>
+                    <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" 
+                    {...register("WifeChildrenNumber", {
+                        required: 'Name is required'
+                    })}
+                    ></textarea>
 
-                    <label className="label"> <span className="label-text">Birthday</span> </label>
-                    <input type='date'
+                    <label className="label"> <span className="label-text">Do your guardians agree to your marriage?</span> </label>
+                    <input type='text'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
-                        // {...register("name", {
-                        //     required: 'Name is required'
-                        // })}
-                        placeholder='Please enter your area name'
-                    />
-                    <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Please provide your real birth date. If there is a fabricated birth date in NID or birth registration, do not provide it.</span></label>
-
-
-                    <label className="label"> <span className="label-text">Height</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="">Less than 4'5'</option>
-                            <option value="">5'</option>
-                            <option value="">6'</option>
-                        </optgroup>
-                    </select>
-
-                    <label className="label"> <span className="label-text">Complexion</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">Black</option>
-                            <option value="">Brown</option>
-                            <option value="">Light Brown</option>
-                            <option value="">Fair</option>
-                            <option value="">Very Fair</option>
-                        </optgroup>
-                    </select>
-
-                    <label className="label"> <span className="label-text">Weight</span> </label>
-                    <input type='number'
-                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
-                        // {...register("name", {
-                        //     required: 'Name is required'
-                        // })}
-                        placeholder='Your Weight'
+                        {...register("GuardiansAgree", {
+                            required: 'This field is required'
+                        })}
+                        placeholder='Please Write Here'
                     />
 
-                    <label className="label"> <span className="label-text">Blood Group</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">A+</option>
-                            <option value="">A-</option>
-                            <option value="">B+</option>
-                            <option value="">B-</option>
-                            <option value="">AB+</option>
-                            <option value="">AB-</option>
-                            <option value="">O+</option>
-                            <option value="">O-</option>
-                            <option value="">Don't know</option>
-                        </optgroup>
-                    </select>
+                    <label className="label"> <span className="label-text">Would you like to allow your wife to study after marriage?</span> </label>
+                    <input type='text'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        {...register("AfterMarriageAllowStudy", {
+                            required: 'This field is required'
+                        })}
+                        placeholder='Please Write Here'
+                    />
 
-                    <label className="label"> <span className="label-text">Nationality</span> </label>
-                    <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' required>
-                        <optgroup label="Please choose an option">
-                        <option selected disabled value="">Select</option>
-                            <option value="">Bangladeshi</option>   
-                        </optgroup>
-                    </select>
+                    <label className="label"> <span className="label-text">Would you like to allow your wife to do any job after marriage?</span> </label>
+                    <input type='text'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        {...register("AfterMarriageAllowJob", {
+                            required: 'This field is required'
+                        })}
+                        placeholder='Please Write Here'
+                    />
+
+                    <label className="label"> <span className="label-text">Where will you live with your wife after marriage?</span> </label>
+                    <input type='text'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        {...register("AfterMarriageLive", {
+                            required: 'This field is required'
+                        })}
+                        placeholder='Please Write Here'
+                    />
+
+                    <label className="label"> <span className="label-text">Would you or your family expect any gift from the bride's family?</span> </label>
+                    <input type='text'
+                        className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
+                        {...register("Joutuk", {
+                            required: 'This field is required'
+                        })}
+                        placeholder='Please Write Here'
+                    />
+                    
                 </div>
             </form>
 

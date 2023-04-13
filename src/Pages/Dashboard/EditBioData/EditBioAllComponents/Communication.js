@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Communication = () => {
+const Communication = ({ register, errors }) => {
     return (
         <div>
             Communication info
