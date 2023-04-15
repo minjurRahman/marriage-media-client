@@ -1,6 +1,7 @@
 import React from 'react';
 
-const GeneralInfo = ({register, errors, setGender}) => {
+const GeneralInfo = ({register, errors, setGender, bioData}) => {
+
     return (
         <div className='mb-6 '>
             <h2 className='text-3xl font-semibold text-center mb-4'>General Information</h2>
@@ -9,17 +10,15 @@ const GeneralInfo = ({register, errors, setGender}) => {
                 <div>
                     <label className="label"> <span className="label-text">Biodata Type</span> </label>
                     <select onChange={(e)=>setGender(e.target.value)} name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
-                    // {...register("BiodataType", {
-                    //     required: 'Biodata Type is required'
-                    // })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="male">Male's Biodata</option>
-                            <option value="female">Female's Biodata</option>
+                            <option selected={!bioData?.gender && true} disabled value="">Select</option>
+                            <option selected={bioData?.gender === "male" && true} value="male">Male's Biodata</option>
+                            <option selected={bioData?.gender === "female" && true} value="female">Female's Biodata</option>
                         </optgroup>
                     </select>
 
+                    {/* Marital Status */}
                     <label className="label"> <span className="label-text">Marital Status</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                     {...register("MaritalStatus", {
@@ -27,17 +26,18 @@ const GeneralInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="Never Married">Never Married</option>
-                            <option value="Married">Married</option>
-                            <option value="Divorced">Divorced</option>
-                            <option value="Widow">Widow</option>
-                            <option value="Widower">Widower</option>
+                            <option selected={!bioData?.MaritalStatus && true} disabled value="">Select</option>
+                            <option selected={bioData?.MaritalStatus === "Never Married" && true} value="Never Married">Never Married</option>
+                            <option selected={bioData?.MaritalStatus === "Married" && true} value="Married">Married</option>
+                            <option selected={bioData?.MaritalStatus === "Divorced" && true} value="Divorced">Divorced</option>
+                            <option selected={bioData?.MaritalStatus === "Widow" && true} value="Widow">Widow</option>
+                            <option selected={bioData?.MaritalStatus === "Widower" && true} value="Widower">Widower</option>
                         </optgroup>
                     </select>
 
+                    {/* Birthday */}
                     <label className="label"> <span className="label-text">Birthday</span> </label>
-                    <input type='date'
+                    <input value={bioData?.Birthday} type='date'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         {...register("Birthday", {
                             required: 'Birthday is required'
@@ -46,8 +46,8 @@ const GeneralInfo = ({register, errors, setGender}) => {
                     />
                     {errors.Birthday && <span>This field is required</span>}
                     <label className="label w-full max-w-xs"><span className="label-text"> <span className='text-red-500'>Note:</span> Please provide your real birth date. If there is a fabricated birth date in NID or birth registration, do not provide it.</span></label>
-
-
+                    
+                    {/* Height */}
                     <label className="label"> <span className="label-text">Height</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                     {...register("Height", {
@@ -55,14 +55,15 @@ const GeneralInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="Less than 4'5'">Less than 4'5'</option>
-                            <option value="5'">5'</option>
-                            <option value="6'">6'</option>
+                            <option selected={!bioData?.Height && true} disabled value="">Select</option>
+                            <option selected={bioData?.Height === "Less than 4'5'" && true} value="Less than 4'5'">Less than 4'5'</option>
+                            <option selected={bioData?.Height === "5'" && true} value="5'">5'</option>
+                            <option selected={bioData?.Height === "6'" && true} value="6'">6'</option>
                         </optgroup>
                     </select>
                     {errors.Height && <span>This field is required</span>}
 
+                    {/* Complexion */}
                     <label className="label"> <span className="label-text">Complexion</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                     {...register("Complexion", {
@@ -70,27 +71,26 @@ const GeneralInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="Black">Black</option>
-                            <option value="Brown">Brown</option>
-                            <option value="Light Brown">Light Brown</option>
-                            <option value="Fair">Fair</option>
-                            <option value="Very Fair">Very Fair</option>
+                            <option selected={!bioData?.Complexion && true} disabled value="">Select</option>
+                            <option selected={bioData?.Complexion === "Black" && true} value="Black">Black</option>
+                            <option selected={bioData?.Complexion === "Brown" && true} value="Brown">Brown</option>
+                            <option selected={bioData?.Complexion === "Light" && true} value="Light Brown">Light Brown</option>
+                            <option selected={bioData?.Complexion === "Fair" && true} value="Fair">Fair</option>
+                            <option selected={bioData?.Complexion === "Very Fair" && true} value="Very Fair">Very Fair</option>
                         </optgroup>
                     </select>
 
+                    {/* Weight */}
                     <label className="label"> <span className="label-text">Weight</span> </label>
-                    <input type='number'
+                    <input value={bioData?.Weight} type='number'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
-                        // {...register("name", {
-                        //     required: 'Name is required'
-                        // })}
                         {...register("Weight", {
                             required: 'Weight is required'
                         })}
                         placeholder='Your Weight'
                     />
 
+                    {/* Blood */}
                     <label className="label"> <span className="label-text">Blood Group</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("BloodGroup", {
@@ -98,19 +98,20 @@ const GeneralInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="A+">A+</option>
-                            <option value="A-">A-</option>
-                            <option value="B+">B+</option>
-                            <option value="B-">B-</option>
-                            <option value="AB+">AB+</option>
-                            <option value="AB-">AB-</option>
-                            <option value="O+">O+</option>
-                            <option value="O-">O-</option>
-                            <option value="Don't know">Don't know</option>
+                            <option selected={!bioData?.BloodGroup && true} disabled value="">Select</option>
+                            <option selected={bioData?.BloodGroup === "A+" && true} value="A+">A+</option>
+                            <option selected={bioData?.BloodGroup === "A-" && true} value="A-">A-</option>
+                            <option selected={bioData?.BloodGroup === "B+" && true} value="B+">B+</option>
+                            <option selected={bioData?.BloodGroup === "B-" && true} value="B-">B-</option>
+                            <option selected={bioData?.BloodGroup === "AB+" && true} value="AB+">AB+</option>
+                            <option selected={bioData?.BloodGroup === "AB-" && true} value="AB-">AB-</option>
+                            <option selected={bioData?.BloodGroup === "O+" && true} value="O+">O+</option>
+                            <option selected={bioData?.BloodGroup === "O-" && true} value="O-">O-</option>
+                            <option selected={bioData?.BloodGroup === "Don't know" && true} value="Don't know">Don't know</option>
                         </optgroup>
                     </select>
 
+                    {/* Nationality */}
                     <label className="label"> <span className="label-text">Nationality</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("Nationality", {
@@ -118,8 +119,8 @@ const GeneralInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="Bangladeshi">Bangladeshi</option>
+                            <option selected={!bioData?.Nationality && true} disabled value="">Select</option>
+                            <option selected={bioData?.Nationality === "Bangladeshi" && true} value="Bangladeshi">Bangladeshi</option>
                         </optgroup>
                     </select>
                 </div>

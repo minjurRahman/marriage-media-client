@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Address from '../EditBioAllComponents/Address';
 import Commitment from '../EditBioAllComponents/Commitment';
 import Communication from '../EditBioAllComponents/Communication';
@@ -16,17 +16,20 @@ const EditBioDataInfo = () => {
     //user email
     const { user } = useContext(AuthContext);
 
+    // Get data from database state
+    const [bioData, setBioData] = useState({});
+
     //Gender verification
     const [gender, setGender] = useState("")
 
-
+    //Put data from user
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        const newData = { ...data, email: user?.email }
+        const newData = { ...data, email: user?.email, gender, createdAt:  new Date() }
         JSON.stringify(data)
         console.log(newData)
 
-        fetch('http://localhost:5000/user',{
+        fetch(`${process.env.REACT_APP_serverLink}/user`,{
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
@@ -36,11 +39,19 @@ const EditBioDataInfo = () => {
         .then(res => res.json())
         .then(data => console.log(data))
     }
+
+    // Get data from database
+    useEffect( () =>{
+        fetch(`${process.env.REACT_APP_serverLink}/user/${user?.email}`)
+        .then(res => res.json())
+        .then(data => setBioData(data))
+     },[user?.email])
+
     return (
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input type="submit" />
-                <GeneralInfo register={register} errors={errors} setGender={setGender} ></GeneralInfo>
+                <GeneralInfo bioData={bioData} register={register} errors={errors} setGender={setGender} ></GeneralInfo>
                 {
                     gender === 'male' && <>
                         <Address register={register} errors={errors} setGender={setGender} ></Address>

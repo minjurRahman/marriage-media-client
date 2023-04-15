@@ -6,10 +6,10 @@ const ShortListed = () => {
             <div className="card bg-base-100 border shadow-lg">
                 <div className="card-body items-center text-center">
                     <h2 className='text-3xl font-bold'>0</h2>
-                    <h3 className="card-title">Connections available</h3>
-                    <p>One connection is required to view contact details of each biodata</p>
+                    <h3 className="card-title">Your biodata has been shortlisted</h3>
+                    <p>Those number of people shortlisted your biodata</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy more connection</button>
+                        <button className="btn btn-primary">demo</button>
                     </div>
                 </div>
             </div>

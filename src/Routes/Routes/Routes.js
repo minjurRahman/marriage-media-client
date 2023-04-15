@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main";
 import Contact from "../../Pages/ContactUs/Contact";
+import AllUsers from "../../Pages/Dashboard/AdminSection/AllUsers/AllUsers";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
 import EditBioDataInfo from "../../Pages/Dashboard/EditBioData/EditBioSection/EditBioDataInfo";
 import IgnoreList from "../../Pages/Dashboard/IgnoreList";
@@ -13,6 +14,8 @@ import ShortList from "../../Pages/Dashboard/ShortList";
 import SupportReport from "../../Pages/Dashboard/SupportReport";
 import FAQ from "../../Pages/FAQ/FAQ";
 import About from "../../Pages/Home/About/About";
+import AllBiodata from "../../Pages/Home/Home/GetBiodata/AllBiodata";
+import SingleBiodataDetails from "../../Pages/Home/Home/GetBiodata/SingleBiodataDetails";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import PrivacyPolicy from "../../Pages/PrivacyPolicy/PrivacyPolicy";
@@ -61,6 +64,15 @@ export const router = createBrowserRouter([
                 path: '/refund-policy',
                 element: <RefundPolicy></RefundPolicy>
             },
+            {
+                path: '/allbiodata',
+                element: <AllBiodata></AllBiodata>
+            },
+            {
+                path: '/biodata-details/:id',
+                element: <SingleBiodataDetails></SingleBiodataDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/biodata/${params.id}`)
+            },
         ]
     },
     {
@@ -79,7 +91,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/editbiodata',
-                element: <EditBioDataInfo></EditBioDataInfo>
+                element: <EditBioDataInfo></EditBioDataInfo>,
             },
             {
                 path: '/dashboard/shortlist',
@@ -104,6 +116,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/logout',
                 element: <LogOut></LogOut>
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AllUsers></AllUsers>
             },
 
         ]

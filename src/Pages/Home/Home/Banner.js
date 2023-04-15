@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PrimaryBtn from '../../../components/PromaryBtn/PrimaryBtn';
 
 const Banner = () => {
@@ -23,7 +24,7 @@ const Banner = () => {
                         <option>Female's Biodata</option>
                     </select>
                 </div>
-                <PrimaryBtn className="me">Search</PrimaryBtn>
+                <Link to='/allbiodata'><PrimaryBtn className="me">Search</PrimaryBtn></Link>
             </div>
         </div>
     );

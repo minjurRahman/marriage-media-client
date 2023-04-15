@@ -10,8 +10,10 @@ const MyBioData = () => {
     console.log(userInfo)
     const { BiodataType, MaritalStatus, Birthday, Height, Complexion, Weight, BloodGroup, Nationality } = userInfo;
 
+    console.log(window.innerWidth);
+
     return (
-        <div className='lg:flex gap-4'>
+        <div className='lg:flex gap-4 mt-4 mb-4'>
             <div className=''>
                 <div className="card w-96 bg-base-100 shadow-xl border">
                     <figure className="px-10 pt-10">

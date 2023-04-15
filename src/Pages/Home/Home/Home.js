@@ -2,6 +2,7 @@ import React from 'react';
 import useTitle from '../../../Hooks/TitleNavigate';
 import Banner from './Banner';
 import CreateBio from './CreateBio';
+import AllBiodata from './GetBiodata/AllBiodata';
 import HowWeWorks from './HowWeWorks/HowWeWorks';
 import UserStatistics from './UserStatistics/UserStatistics';
 
