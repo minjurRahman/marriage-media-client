@@ -1,12 +1,13 @@
 import React from 'react';
 
-const EducationalInfo = ({register, errors, setGender}) => {
+const EducationalInfo = ({register, errors, setGender, bioData}) => {
     return (
         <div className='mb-6 '>
             <h2 className='text-3xl font-semibold text-center mb-4'>Educational Qualifications</h2>
             <hr />
             <form className='flex justify-center items-center'>
                 <div>
+                    {/* Education Method */}
                     <label className="label"> <span className="label-text">Your Education Method</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("EducationMethod", {
@@ -14,13 +15,14 @@ const EducationalInfo = ({register, errors, setGender}) => {
                     })}
                     >
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="General">General</option>
-                            <option value="Qawmi">Qawmi</option>
-                            <option value="Alia">Alia</option>
+                            <option selected={!bioData?.EducationMethod && true} disabled value="">Select</option>
+                            <option selected={bioData?.EducationMethod === "General" && true} value="General">General</option>
+                            <option selected={bioData?.EducationMethod === "Qawmi" && true} value="Qawmi">Qawmi</option>
+                            <option selected={bioData?.EducationMethod === "Alia" && true} value="Alia">Alia</option>
                         </optgroup>
                     </select>
 
+                    {/* Highest Education */}
                     <label className="label"> <span className="label-text">Highest educational qualification</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("HighestEducationalQualification", {
@@ -28,21 +30,22 @@ const EducationalInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="Below SSC">Below SSC</option>
-                            <option value="SSC">SSC</option>
-                            <option value="HSC">HSC</option>
-                            <option value="Diploma Running">Diploma Running</option>
-                            <option value="Diploma">Diploma</option>
-                            <option value="Undergraduate">Undergraduate</option>
-                            <option value="Graduate">Graduate</option>
-                            <option value="Post Graduate">Post Graduate</option>
-                            <option value="Doctorate">Doctorate</option>
+                            <option selected={!bioData?.HighestEducationalQualification && true} disabled value="">Select</option>
+                            <option selected={bioData?.HighestEducationalQualification === "Below SSC" && true} value="Below SSC">Below SSC</option>
+                            <option selected={bioData?.HighestEducationalQualification === "SSC" && true} value="SSC">SSC</option>
+                            <option selected={bioData?.HighestEducationalQualification === "HSC" && true} value="HSC">HSC</option>
+                            <option selected={bioData?.HighestEducationalQualification === "Diploma Running" && true} value="Diploma Running">Diploma Running</option>
+                            <option selected={bioData?.HighestEducationalQualification === "Diploma" && true} value="Diploma">Diploma</option>
+                            <option selected={bioData?.HighestEducationalQualification === "Undergraduate" && true} value="Undergraduate">Undergraduate</option>
+                            <option selected={bioData?.HighestEducationalQualification === "Graduate" && true} value="Graduate">Graduate</option>
+                            <option selected={bioData?.HighestEducationalQualification === "Post Graduate" && true} value="Post Graduate">Post Graduate</option>
+                            <option selected={bioData?.HighestEducationalQualification === "Doctorate" && true} value="Doctorate">Doctorate</option>
                         </optgroup>
                     </select>
 
+                    {/* SSC/ Dakhil Year */}
                     <label className="label"> <span className="label-text">SSC / Dakhil / Equivalent Passing year </span> </label>
-                    <input type='number'
+                    <input value={bioData?.SSCDakhilYear} type='number'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         {...register("SSCDakhilYear", {
                             required: 'SSC / Dakhil / Equivalent Passing year is required'
@@ -50,6 +53,7 @@ const EducationalInfo = ({register, errors, setGender}) => {
                         placeholder='2011'
                     />
 
+                    {/* SSC/Dakhil group */}
                     <label className="label"> <span className="label-text">Group</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("SSCDakhilGroup", {
@@ -57,14 +61,15 @@ const EducationalInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="Science">Science</option>
-                            <option value="Commerce">Commerce</option>
-                            <option value="Arts">Arts</option>
-                            <option value="Vocational">Vocational</option>
+                            <option selected={!bioData?.SSCDakhilGroup && true} disabled value="">Select</option>
+                            <option selected={bioData?.SSCDakhilGroup === "Science" && true} value="Science">Science</option>
+                            <option selected={bioData?.SSCDakhilGroup === "Commerce" && true} value="Commerce">Commerce</option>
+                            <option selected={bioData?.SSCDakhilGroup === "Arts" && true} value="Arts">Arts</option>
+                            <option selected={bioData?.SSCDakhilGroup === "Vocational" && true} value="Vocational">Vocational</option>
                         </optgroup>
                     </select>
 
+                    {/* SSC / Dakhil Result */}
                     <label className="label"> <span className="label-text">Result</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("SSCDakhilResult", {
@@ -72,17 +77,18 @@ const EducationalInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="A+ (All Subjects)">A+ (All Subjects)</option>
-                            <option value="A+">A+</option>
-                            <option value="A">A</option>
-                            <option value="A-">A-</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
+                            <option selected={!bioData?.SSCDakhilResult && true} disabled value="">Select</option>
+                            <option selected={bioData?.SSCDakhilResult === "A+ (All Subjects)" && true} value="A+ (All Subjects)">A+ (All Subjects)</option>
+                            <option selected={bioData?.SSCDakhilResult === "A+" && true} value="A+">A+</option>
+                            <option selected={bioData?.SSCDakhilResult === "A" && true} value="A">A</option>
+                            <option selected={bioData?.SSCDakhilResult === "A-" && true} value="A-">A-</option>
+                            <option selected={bioData?.SSCDakhilResult === "B" && true} value="B">B</option>
+                            <option selected={bioData?.SSCDakhilResult === "C" && true} value="C">C</option>
+                            <option selected={bioData?.SSCDakhilResult === "D" && true} value="D">D</option>
                         </optgroup>
                     </select>
 
+                    {/* After SSC / Dakhil */}
                     <label className="label"> <span className="label-text">What medium did you study after SSC?</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("MediumAfterSSCDakhil", {
@@ -90,14 +96,15 @@ const EducationalInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="HSC">HSC</option>
-                            <option value="Diploma">Diploma</option>
+                            <option selected={!bioData?.MediumAfterSSCDakhil && true} disabled value="">Select</option>
+                            <option selected={bioData?.MediumAfterSSCDakhil === "HSC" && true} value="HSC">HSC</option>
+                            <option selected={bioData?.MediumAfterSSCDakhil === "Diploma" && true} value="Diploma">Diploma</option>
                         </optgroup>
                     </select>
 
+                    {/* HSC / Alim Year */}
                     <label className="label"> <span className="label-text">HSC / Alim / Equivalent passing year </span> </label>
-                    <input type='number'
+                    <input value={bioData?.HSCAlimYear} type='number'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         {...register("HSCAlimYear", {
                             required: 'HSC / Alim passing year is required'
@@ -105,6 +112,7 @@ const EducationalInfo = ({register, errors, setGender}) => {
                         placeholder='2013'
                     />
 
+                    {/* HSC / Alim group */}
                     <label className="label"> <span className="label-text">Group </span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("HSCAlimGroup", {
@@ -112,14 +120,15 @@ const EducationalInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="Science">Science</option>
-                            <option value="Commerce">Commerce</option>
-                            <option value="Arts">Arts</option>
-                            <option value="Vocational">Vocational</option>
+                            <option selected={!bioData?.HSCAlimGroup && true} disabled value="">Select</option>
+                            <option selected={bioData?.HSCAlimGroup === "Science" && true} value="Science">Science</option>
+                            <option selected={bioData?.HSCAlimGroup === "Commerce" && true} value="Commerce">Commerce</option>
+                            <option selected={bioData?.HSCAlimGroup === "Arts" && true} value="Arts">Arts</option>
+                            <option selected={bioData?.HSCAlimGroup === "Vocational" && true} value="Vocational">Vocational</option>
                         </optgroup>
                     </select>
 
+                    {/* HSC / Alim result */}
                     <label className="label"> <span className="label-text">Result</span> </label>
                     <select name="district" className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs' 
                     {...register("HSCAlimResult", {
@@ -127,19 +136,20 @@ const EducationalInfo = ({register, errors, setGender}) => {
                     })}
                     required>
                         <optgroup label="Please choose an option">
-                            <option selected disabled value="">Select</option>
-                            <option value="A+ (All Subjects)">A+ (All Subjects)</option>
-                            <option value="A+">A+</option>
-                            <option value="A">A</option>
-                            <option value="A-">A-</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
+                            <option selected={!bioData?.HSCAlimResult && true} disabled value="">Select</option>
+                            <option selected={bioData?.HSCAlimResult === "A+ (All Subjects)" && true} value="A+ (All Subjects)">A+ (All Subjects)</option>
+                            <option selected={bioData?.HSCAlimResult === "A+" && true} value="A+">A+</option>
+                            <option selected={bioData?.HSCAlimResult === "A" && true} value="A">A</option>
+                            <option selected={bioData?.HSCAlimResult === "A-" && true} value="A-">A-</option>
+                            <option selected={bioData?.HSCAlimResult === "B" && true} value="B">B</option>
+                            <option selected={bioData?.HSCAlimResult === "C" && true} value="C">C</option>
+                            <option selected={bioData?.HSCAlimResult === "D" && true} value="D">D</option>
                         </optgroup>
                     </select>
 
+                    {/* Graduation subject */}
                     <label className="label"> <span className="label-text">Graduation study subject</span> </label>
-                    <input type='text'
+                    <input value={bioData?.GraduationSubject} type='text'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         {...register("GraduationSubject", {
                             required: 'Graduation subject is required'
@@ -147,8 +157,9 @@ const EducationalInfo = ({register, errors, setGender}) => {
                         placeholder='Name of subject'
                     />
 
+                    {/* Institution / University name */}
                     <label className="label"> <span className="label-text">Name of educational institution</span> </label>
-                    <input type='text'
+                    <input value={bioData?.InstitutionUniversityName} type='text'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         {...register("InstitutionUniversityName", {
                             required: 'Institution / University name is required'
@@ -156,8 +167,9 @@ const EducationalInfo = ({register, errors, setGender}) => {
                         placeholder='Institution/ University'
                     />
 
+                    {/* Graduation year */}
                     <label className="label"> <span className="label-text">Passing year</span> </label>
-                    <input type='number'
+                    <input value={bioData?.GraduationYear} type='number'
                         className='p-3 border-2 border-double rounded-md select-bordered w-full max-w-xs'
                         {...register("GraduationYear", {
                             required: 'Graduation year is required'
@@ -165,8 +177,9 @@ const EducationalInfo = ({register, errors, setGender}) => {
                         placeholder='2018'
                     />
 
+                    {/* Other Education */}
                     <label className="label"> <span className="label-text">Other educational qualifications</span> </label>
-                    <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" 
+                    <textarea value={bioData?.OtherEducation} placeholder="Write here" className="textarea textarea-bordered textarea-lg border-double rounded-md w-full max-w-xs" 
                     {...register("OtherEducation",
                     )}
                     ></textarea>

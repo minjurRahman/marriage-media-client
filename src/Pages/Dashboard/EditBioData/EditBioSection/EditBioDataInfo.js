@@ -54,19 +54,27 @@ const EditBioDataInfo = () => {
                 <GeneralInfo bioData={bioData} register={register} errors={errors} setGender={setGender} ></GeneralInfo>
                 {
                     gender === 'male' && <>
-                        <Address register={register} errors={errors} setGender={setGender} ></Address>
-                        <EducationalInfo register={register} errors={errors} setGender={setGender} ></EducationalInfo>
-                        <FamilyInfo register={register} errors={errors} setGender={setGender} ></FamilyInfo>
-                        <PersonalInfo register={register} errors={errors} ></PersonalInfo>
-                        <ProfessionalInfo register={register} errors={errors} ></ProfessionalInfo>
+                        <Address bioData={bioData} register={register} errors={errors} setGender={setGender} ></Address>
+                        <EducationalInfo bioData={bioData} register={register} errors={errors} setGender={setGender} ></EducationalInfo>
+                        <FamilyInfo bioData={bioData} register={register} errors={errors} setGender={setGender} ></FamilyInfo>
+                        <PersonalInfo bioData={bioData} register={register} errors={errors} ></PersonalInfo>
+                        <ProfessionalInfo bioData={bioData} register={register} errors={errors} ></ProfessionalInfo>
+                        <MarriageRelatedInfo bioData={bioData} register={register} errors={errors} ></MarriageRelatedInfo>
+                        <ExpectedLifePartnerInfo bioData={bioData} register={register} errors={errors} ></ExpectedLifePartnerInfo>
+                        <Commitment bioData={bioData} register={register} errors={errors} ></Commitment>
                     </>
                 }
                 {
                     gender === 'female' && <>
-                        <MarriageRelatedInfo register={register} errors={errors} ></MarriageRelatedInfo>
-                        <ExpectedLifePartnerInfo register={register} errors={errors} ></ExpectedLifePartnerInfo>
-                        <Commitment register={register} errors={errors} ></Commitment>
-                        <Communication register={register} errors={errors} ></Communication>
+                        <Address bioData={bioData} register={register} errors={errors} setGender={setGender} ></Address>
+                        <EducationalInfo bioData={bioData} register={register} errors={errors} setGender={setGender} ></EducationalInfo>
+                        <FamilyInfo bioData={bioData} register={register} errors={errors} setGender={setGender} ></FamilyInfo>
+                        <PersonalInfo bioData={bioData} register={register} errors={errors} ></PersonalInfo>
+                        <ProfessionalInfo bioData={bioData} register={register} errors={errors} ></ProfessionalInfo>
+                        <MarriageRelatedInfo bioData={bioData} register={register} errors={errors} ></MarriageRelatedInfo>
+                        <ExpectedLifePartnerInfo bioData={bioData} register={register} errors={errors} ></ExpectedLifePartnerInfo>
+                        <Commitment bioData={bioData} register={register} errors={errors} ></Commitment>
+                        {/* <Communication register={register} errors={errors} ></Communication> */}
                     </>
                 }
             </form>
